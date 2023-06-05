@@ -12,6 +12,7 @@
           <tr>
             <th>タイトル</th>
             <th>日程</th>
+            <th>時間</th>
           </tr>
         </thead>
 
@@ -20,6 +21,7 @@
             <tr>
               <td><%= link_to blog.title , blog %></td>
               <td><%= blog.start_time.strftime("%m-%d") %></td>
+              <td><%= blog.start_time.strftime("%H:%M") %></td>
             </tr>
           <% end %>
         </tbody>

@@ -1,24 +1,30 @@
-<%= form_with(model: @blog, local: true) do |form| %>
+<div class="container">
+  <div class="row">
+    <div class="col-4 mx-auto">
+      <%= form_with(model: @blog, local: true) do |form| %>
 
-  <div class="title">
-    <div class="form-tag">タイトル</div>
-    <%= form.text_field :title %>
+        <div class="title">
+          <div class="form-tag">タイトル</div>
+          <%= form.text_field :title %>
+        </div>
+
+
+        <div class="content">
+          <div class="form-tag">内容</div>
+          <%= form.text_field :content %>
+        </div>
+
+          <div class="time">
+          <div class="form-tag">時間</div>
+          <%= form.datetime_select :start_time %>
+        </div>
+
+
+        <div class="submit">
+          <%= form.submit %>
+        </div>
+
+      <% end %>
+    </div>
   </div>
-
-
-  <div class="content">
-    <div class="form-tag">内容</div>
-    <%= form.text_field :content %>
-  </div>
-
-    <div class="time">
-    <div class="form-tag">時間</div>
-    <%= form.datetime_select :start_time %>
-  </div>
-
-
-  <div class="submit">
-    <%= form.submit %>
-  </div>
-
-<% end %>
+</div>
